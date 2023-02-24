@@ -5,7 +5,7 @@ const mongoDB = require("./db")
 mongoDB();
 
 app.use((req,res,next)=>{
-    res.setHeader("Access-Control-Allow-Origin","*");
+    res.setHeader("Access-Control-Allow-Origin","https://babachoda.netlify.app/");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
@@ -14,7 +14,7 @@ app.use((req,res,next)=>{
 })
 
 app.get('/', (req, res) => {
-  res.send('MY NAME IS SAYAN :)')
+  res.send('SAYAN')
 })
 app.use(express.json())
 app.use('/api', require("./Routes/CreateUser"));
